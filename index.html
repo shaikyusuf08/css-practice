@@ -1,31 +1,63 @@
+<!-- 
+  IMPORTANT! Do not change any HTML
+Don't add any classes/ids/elements 
+Use what you know about combining selectors 
+and CSS specificity instead.
+Hint 1: The flag is 900px by 600px and the circle is 200px by 200px.
+Hint 2: You can use CSS inspection to get the colors from
+https://appbrewery.github.io/flag-of-laos/
+-->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Flag project</title>
+    <style>
+      .flag {
+        width: 900px;
+        height: 600px;
+        background-color: #ce1126;
+        position: relative;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <title>Combining CSS Selectors</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
+      .flag > div {
+        width: 100%;
+        height: 300px;
+        background-color: #002868;
+        position: absolute;
+        top: 150px;
+      }
 
-<!-- Don't change any of the HTML code! -->
+      .flag > div > div {
+        width: 200px;
+        height: 200px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+        left: 350px;
+      }
 
-<body>
-  <h1>To Do List</h1>
-  <h2>Monday</h2>
-  <div class="box">
-    <p class="done">Do these things today!</p>
-    <ul class="list">
-      <li>Wash Clothes</li>
-      <li class="done">Read</li>
-      <li class="done">Maths Questions</li>
-    </ul>
-  </div>
+      p {
+        margin: 0;
+        font-size: 5rem;
+        text-align: center;
+        color: white;
+      }
 
-  <ul>
-    <p class="done">Other items</p>
-  </ul>
-  <p>The best preparation for tomorrow is doing your best today.</p>
-
-</body>
-
+      body > div > div > div > p {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flag">
+      <p>The Flag</p>
+      <div>
+        <div>
+          <p>of Laos</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
