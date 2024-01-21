@@ -1,49 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mondrian Project</title>
+    <style>
+      /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    item: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="google" content="notranslate">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grid Fundamentals</title>
-  <style>
-    body {
-      font-family: sans-serif;
-    }
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100vh;
-      background-color: #f2f2f2;
-    }
+      .container {
+        width: 748px;
+        height: 748px;
+        display: grid;
+        background-color: #000;
+        grid-template-columns: 320px 198px 153px 50px;
+        grid-template-rows: 414px 130px 155px 22px;
+        gap: 9px;
+      }
 
-    .item {
-      width: 200px;
-      margin: 20px;
-      background-color: #3498db;
-      color: #fff;
-      text-align: center;
-      line-height: 2;
-      font-size: 24px;
-    }
-  </style>
-</head>
+      .item {
+        background-color: #f0f1ec;
+      }
 
-<body>
-  <div class="container">
-    <h1>Grid Sizing</h1>
-    <a class="item" href="./fixed-size.html">Fixed Size</a>
-    <a class="item" href="./auto-size.html">Auto Size</a>
-    <a class="item" href="./fractional-size.html">Fractional Size</a>
-    <a class="item" href="./minmax-size.html">MinMax Size</a>
-    <a class="item" href="./repeat.html">Repeat</a>
-    <a class="item" href="./test.html">Test</a>
+      .red {
+        background-color: #e72f24;
+      }
 
+      .white1 {
+        grid-column: span 3;
+      }
 
-  </div>
-</body>
+      .white2 {
+        grid-row: span 2;
+      }
 
+      .white3 {
+        grid-area: 2 / 2 / 4 / 4;
+      }
+
+      .blue {
+        background-color: #004592;
+        border-bottom: 10px solid blacK;
+      }
+
+      .white4 {
+        grid-row: span 2;
+      }
+
+      .yellow {
+        background-color: #f9d01e;
+      }
+
+      .black {
+        background-color: #232629;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Write your HTML here -->
+    <div class="container">
+      <div class="item red"></div>
+      <div class="item white1"></div>
+      <div class="item white2"></div>
+      <div class="item white3"></div>
+      <div class="item blue"></div>
+      <div class="item white4"></div>
+      <div class="item"></div>
+      <div class="item yellow"></div>
+      <div class="item black"></div>
+    </div>
+  </body>
 </html>
