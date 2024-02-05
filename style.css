@@ -1,33 +1,41 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+#navbar {
+    height: 60px;
+    background-color: #0f1111;
+}
+
+#logo {
+    color: #f08804;
+    font-size: 25px;
+}
+
+a {
+    margin-right: 200px;
+    text-decoration: none;
+}
+
+button {
+    background-color: #f08804;
+}
+
+footer {
+    color: white;
+    background-color: #0f1111;
     text-align: center;
 }
 
-div {
+#content {
+    height: 720px;
+}
+
+.contentBox {
     height: 100px;
     width: 100px;
-    display: inline-block;
     border: 2px solid black;
-}
-
-#container {
-    height: 200px;
-    width: 800px;
-    display: flex;
-    flex-direction: row;
-}
-
-#box1 {
-    background-color: aqua;
-}
-#box2 {
-    background-color: salmon;
-}
-#box3 {
-    background-color: khaki;
-}
-#box4 {
-    background-color: violet;
-}
-#box5 {
-    background-color: gold;
+    display: inline-block;
 }
